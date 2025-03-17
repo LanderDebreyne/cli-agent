@@ -118,6 +118,13 @@ The text editor tool includes several safety guardrails to prevent unauthorized 
 
 5. **Undo Functionality** - The `undo_edit` command lets you revert the last edit made to any file.
 
+6. **Human in the Loop Confirmation** - Write actions (create, edit, delete) include a confirmation mechanism that:
+   - Shows a preview of changes with a diff for edits or the content for new files
+   - Prompts the user with "Do you want to apply these changes? (yes/no)"
+   - Only proceeds with the modification if the user explicitly confirms with "yes"
+   - Completely cancels the operation if the user responds with "no"
+   - This confirmation system ensures no file modifications occur without explicit user approval
+
 This makes the tool both powerful and safe for use in production environments.
 
 ## Search Tool Functionality
